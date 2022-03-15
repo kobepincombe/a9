@@ -1,10 +1,12 @@
- [
-    "title": "Mr. Brightside",
-    "artist": "The Killers",
-    "year": "(2003)",
-    "genres": [
-    "Alternative rock",
-    "Pop rock",
-    "Alternative/Indie"
-    ]
+[
+    {
+        "title": "Mr. Brightside",
+        "artist": "The Killers",
+        "year": "(2003)",
+        "genres": [
+            "Alternative rock",
+            "Pop rock",
+            "Alternative/Indie"
+        ]
+    }
 ]
