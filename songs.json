@@ -3,10 +3,60 @@
         "title": "Mr. Brightside",
         "artist": "The Killers",
         "year": "(2003)",
-        "genres": [
-            "Alternative rock",
-            "Pop rock",
-            "Alternative/Indie"
-        ]
+        "genres": ["Alternative rock", "Pop rock", "Alternative/Indie"]
+    },
+    {
+        "title": "Seven Seas of Rhye",
+        "artist": "Queen",
+        "year": "(1973)",
+        "genres": ["Glam rock", "Hard rock"]
+    },
+    {
+        "title": "Walk Like An Egyptian",
+        "artist": "The Bangles",
+        "year": "(1986)",
+        "genres": ["Alternative/Indie", "Pop", "Folk"]
+    },
+    {
+        "title": "Roundabout",
+        "artist": "Yes",
+        "year": "(1971)",
+        "genres": ["Alternative/Indie", "Folk", "Rock"]
+    },
+    {
+        "title": "Highway Star",
+        "artist": "Deep Purple",
+        "year": "(1972)",
+        "genres": ["Hard rock", "Metal"]
+    },
+    {
+        "title": "Tusk",
+        "artist": "Fleetwood Mac",
+        "year": "(1979)",
+        "genres": ["Rock", "Pop rock"]
+    },
+    {
+        "title": "20th Century Boy",
+        "artist": "T.Rex",
+        "year": "(1973)",
+        "genres": ["Glam rock", "Hard rock"]
+    },
+    {
+        "title": "King Nothing",
+        "artist": "Metallica",
+        "year": "(1997)",
+        "genres": ["Heavy metal", "Metal"]
+    },
+    {
+        "title": "Soft and Wet",
+        "artist": "Prince",
+        "year": "(1978)",
+        "genres": ["Rhythm and Blues", "Soul"]
+    },
+    {
+        "title": "Dude (Looks Like A Lady)",
+        "artist": "Aerosmith",
+        "year": "(1987)",
+        "genres": ["Glam metal", "Hard rock", "Blues rock"]
     }
 ]
