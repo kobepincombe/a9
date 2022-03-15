@@ -1,0 +1,89 @@
+h1 {
+    font-weight: bold;
+    font-size: xxx-large;
+    color: rebeccapurple;
+    text-align: center;
+    border: 5px solid slategrey;
+    border-radius: 5px;
+}
+
+.genre_box {
+    display: grid;
+    grid-gap: 10px;
+    border: 5px solid slategrey;
+    border-radius: 5px;
+    padding: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    font-size: large;
+    font-family: sans-serif;
+    color: rebeccapurple;
+    text-align: center;
+}
+
+select {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    margin: auto;
+}
+
+#filtered {
+    font-weight: bold;
+    font-size: x-large;
+    font-style: oblique;
+    font-family: sans-serif;
+    color: rebeccapurple;
+    padding: 7px;
+}
+
+.set_list {
+    display: grid;
+    grid-gap: 10px;
+    padding: 1%;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+    width: 60%;
+}
+
+.song {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 5px solid slategrey;
+    border-radius: 5px;
+    font-size: medium;
+    font-family: sans-serif;
+    color: darkslateblue;
+}
+
+.song_title {
+    font-weight: bold;
+    font-size: x-large;
+    font-style: oblique;
+    color: rebeccapurple;
+    padding: 7px;
+}
+
+.artist {
+    display: block;
+    color: maroon;
+}
+
+.year {
+    display: inline-block;
+    color: maroon;
+}
+
+.genres {
+    display: block;
+    padding-inline: 10px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Songs List</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href=style.css>
+</head>
+<body>
+    <h1>JSON Song List</h1>
+    <div id="raw" class="set_list"></div>
+    <div id="list" class="set_list"></div>
+    <!--The selection box for genres!-->
+    <div class="genre_box">
+        <label for="genre_select">Choose a genre of songs:</label>
+        <select name='genre_select' id="genre_select">
+            <option value="Rock">Rock</option>
+            <option value="Pop rock">Pop rock</option>
+            <option value="Glam rock">Glam rock</option>
+            <option value="Hard rock">Hard rock</option>
+            <option value="Blues rock">Blues rock</option>
+            <option value="Alternative rock">Alternative rock</option>
+            <option value="Alternative/Indie">Alternative/Indie</option>
+            <option value="Metal">Metal</option>
+            <option value="Heavy metal">Heavy metal</option>
+            <option value="Glam metal">Glam metal</option>
+            <option value="Rhythm and Blues">Rhythm and Blues</option>
+            <option value="Folk">Folk</option>
+            <option value="Pop">Pop</option>
+            <option value="Soul">Soul</option>
+        </select>
+        <button id="filter" onclick="filterer()">Filter</button>
+        <div id="filtered"></div>
+    </div>
+    <script>
+        //  Gets JSON data ready and displays it
+        $(document).ready(function(){
+            $.getJSON("https://kobepincombe.github.io/a9/songs.json", function(result){
+                //JSON Raw String
+                $('#raw').append("<div class='song'>" + JSON.stringify(result) + "</div>");
+                //JSON Song List - Places all songs in a nice display
+                var song_obj = JSON.parse(JSON.stringify(result));
+                for(i = 0; i < song_obj.length; i++) {
+                    $('#list').append("<div class='song'>" +
+                        "<span class='song_title'>" + song_obj[i].title + "</span>" +
+                        "<div class='artist'>" + song_obj[i].artist + "</div>" +
+                        "<div class='year'>" + song_obj[i].year + "</div>" +
+                        "<div class='genres'>" + genrelist(song_obj[i].genres) + "</div>" +
+                        "</div>");
+                }
+            });
+        });
+        //  function that puts all the genres of a song into a string that looks
+        //  better than the standard appending/printing of arrays
+        function genrelist(genre_list) {
+            var genre_string = "";
+            for(j = 0; j < genre_list.length; j++) {
+                if (j == (genre_list.length - 1)) {
+                    genre_string += genre_list[j];
+                } else {
+                    genre_string += genre_list[j] + ", ";
+                }
+            }
+            return genre_string;
+        }
+        //  function that filters all the songs in a genre and displays them
+        //  in the correct place on the page
+        function filterer() {
+            $.getJSON("https://kobepincombe.github.io/a9/songs.json", function(result) {
+                var song_obj = JSON.parse(JSON.stringify(result));
+                var genre = document.getElementById("genre_select").value;
+                $('#filtered').html("<br>");
+                for (i = 0; i < song_obj.length; i++) {
+                    if (song_obj[i].genres.includes(genre)) {
+                        $('#filtered').append(song_obj[i].title + "<br>");
+                    }
+                }
+            })
+        }
+    </script>
+</body>
+</html>
